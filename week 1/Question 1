@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int i,j,key,loop,count=1;
+   cout<<"enter number of times the loop will execute"<<endl;
+   cin>>loop;
+   while(loop!=0){
+        cout<<"enter number of elements in an array"<<endl;
+       cin>>i;
+       int arr[i];
+       cout<<"enter array elemnts"<<endl;
+       for(j=0;j<i;j++){
+           cin>>arr[j];
+           
+       }
+       cout<<"enter key element"<<endl;
+       cin>>key;
+       for(j=0;j<i;j++){
+           count++;
+             if(arr[j]==key){
+             
+               cout<<"found "<<endl;
+               break;
+           }
+       }
+        cout<<"total comparison "<<count<<endl;
+       loop--;
+}
+    return 0;
+}
