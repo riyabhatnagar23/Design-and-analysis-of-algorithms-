@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+   int i,key,max,loop,count=0,mid,l=0,u;
+    cout<<"enter number of times loop will execute"<<endl;
+    cin>>loop;
+    while(loop!=0){
+       cout<<"enter number of elements"<<endl;
+   cin>>max;
+   u=max-1;
+     int arr[max];
+       cout<<"enter elements in an array"<<endl;
+       for(i=0;i<max;i++){
+           cin>>arr[i];
+       }
+       cout<<"enter key value"<<endl;
+       cin>>key;
+        for(i=0;i<max;i++){
+     mid=(u+l)/2;
+     if(arr[mid]>key){
+         u=mid-1;
+         count++;
+     }
+     else if(arr[mid]<key){
+         l=mid+1;
+         count++;
+     }
+     else{
+         count++;
+        
+     }
+      
+        }
+     if(count>max){
+         cout<<"not found"<<count<<endl;
+     }
+     else if(count<=max){
+         cout<<"found "<<count<<endl;
+     }
+     loop--;
+     count=0;
+   }
+    return 0;
+}
