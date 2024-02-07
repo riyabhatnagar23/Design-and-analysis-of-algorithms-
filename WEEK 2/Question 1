@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+int loop;
+cout<<"enter number of loops "<<endl;
+cin>>loop;
+while(loop!=0){
+int i,n;
+cout<<"enter number of elemnts"<<endl;
+cin>>n;
+int arr[n];
+cout<<"enter number of elemnts in an array"<<endl;
+for(i=0;i<n;i++){
+cin>>arr[i];
+}
+int key,count=0;
+cout<<"enter key"<<endl;
+cin>>key;
+for(i=0;i<n;i++){
+if(arr[i]==key){
+count++;
+}
+}
+cout<<key<<"-"<<count<<endl;
+count=0;
+loop--;
+}
+return 0;
+}
