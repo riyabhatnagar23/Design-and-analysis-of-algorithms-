@@ -1,0 +1,42 @@
+
+#include <iostream>
+using namespace std;
+void frequency(char arr[],int n){
+    int freq[n],i=0,p=0;
+    for(int i=0;i<n;i++){freq[i]=0;
+    }
+for(int i=0;i<n;i++){ char num=arr[i];
+         for(int j=0;j<n;j++){ 
+             if(num==arr[j])
+             freq[i]++;
+         }
+     }
+     int max=freq[0];
+     for(i=1;i<n;i++){
+          if(max<freq[i]){
+              max=freq[i];
+              p=i;
+          }
+     }
+   
+     cout<<arr[p]<<" - "<<max;
+}
+int main() {
+  int loop;
+  cout<<"enter loop"<<endl;
+  cin>>loop;
+  while(loop!=0){
+      int n=0,i=0;
+      cout<<"enter number of elements"<<endl;
+      cin>>n;
+      char arr[n];
+      cout<<"enter elements"<<endl;
+      for(i=0;i<n;i++){
+          cin>>arr[i];
+       
+      }
+     frequency(arr,n);
+     loop--;
+  }
+    return 0;
+}
